@@ -7,3 +7,5 @@ stdout_path "#{root}/log/unicorn.log"
 listen "/tmp/unicorn.btc_four.sock"
 worker_processes 2
 timeout 30
+
+ 
