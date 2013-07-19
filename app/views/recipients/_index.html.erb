@@ -1,0 +1,29 @@
+<div class="recipients">
+  <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th><%= t("recipients.name")%></th>
+        <th><%= t("recipients.school")%></th>
+        <th><%= t("recipients.age")%></th>
+      </tr>
+    </thead>
+    <% @recipient.each do |r|%>
+    <tbody>
+      <tr>
+        <td >
+          <%= r.name %>
+        </td>
+        <td >
+          <%= r.school %>
+        </td>
+        <td>
+          <%= r.age%>
+        </td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+  <div class="text-center" onclick="window.location = '#services'">
+  <%= paginate @recipient, :remote => true, :param_name => :fuck_page%>
+  </div>
+</div>

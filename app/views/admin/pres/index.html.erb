@@ -1,0 +1,42 @@
+<h1 class="text-center muted">新闻管理</h1>
+<div class="container-fluid" style= "padding-bottom: 2%">
+  <div class="row-fluid">
+    <div class="span2 offset1">
+      <div style="background-color: white;">
+      <%= render "shared/left"%>
+      </div>
+    </div>
+
+    <div class="span7 " style="background-color: white;">
+    <!--Sidebar content-->
+    <h2 style="padding-left: 1%">
+      <%= link_to "新建", new_admin_pre_path, class: "btn btn-primary"%>
+    </h2>
+    <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>新闻标题</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <% @pre.each do |p|%>
+    <tbody>
+      <tr>
+        <td >
+          <%= p.title %>
+        </td>
+        <td >
+          <%= link_to "编辑", edit_admin_pre_path(p)%>
+          <%= link_to "删除",p , method: :delete %>
+        </td>
+      </tr>
+    </tbody>
+    <% end %>
+    </table>
+      <div class="text-center">
+          <%= paginate @pre %>
+      </div>
+    </div>
+  </div>
+</div>
+

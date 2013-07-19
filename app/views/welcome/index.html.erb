@@ -1,0 +1,195 @@
+
+        <!-- HEADER HOME  -->
+        <section id="home">
+            <div class="row centered">
+
+                <h1 class="fade-it"><img alt="YOURLOGO" src="assets/img/logo/logo_header.png"></h1>
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li><h2><%= t("index.title1")%></h2></li>
+                        <li><h2><%= t("index.title2")%></h2></li>
+                        <li><h2><%= t("index.title3")%></h2></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- LITTLE LOGO SEE WHAT WE DO --> 
+            <div id="down_button" class="fade-it"><a href="#whatwedo"></a></div>
+            <div class="social-header hidden-phone">
+
+                
+                <a href="#" class="social-network sn2 pinterest"></a>
+ 
+
+
+            </div>
+            <!-- END LITTLE LOGO SEE WHAT WE DO --> 
+
+        </section>
+        <!-- END HEADER HOME  -->
+        <!-- NAVIGATION  -->
+
+        <div class="navbar-wrapper">
+            <div class="navbar" id="navigation">
+                <div class="navbar-inner">
+                    <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="">  <img src="assets/img/logo_small.png"></a>
+                    <div class="nav-collapse collapse" >
+                        <ul class="nav pull-right">
+                            <li><a href="#home" class="selected"><%= t("index.Home")%></a></li>
+                            <li><a href="#whatwedo"><%= t("index.Donors") %></a></li>
+                            <li><a href="#services"><%= t("index.Student") %></a></li>
+                            <li><a href="#about"><%= t("index.News") %></a></li>
+                            <li><a href="#contact"><%= t("index.Aboutus") %></a></li>
+ 
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+        <!-- END NAVIGATION  --><!-- WHAT WE DO SECTION  -->
+
+        <section id="whatwedo">
+            <div class="container" style="min-height:920px;">
+                <div class="row">
+                    <div class="span12 centered">
+                        <h2><%= t("index.Donors") %></h2>
+                        <div class="breaker"><span class="left"></span><div class="feather"></div><span class="right"></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12 centered ">
+                    
+                            <!--捐助列表-->
+                            <%= render "donors/index"%>
+                    </div>
+                </div>
+                <!-- END 捐助列表  -->
+            </div>
+        </section>
+        <!-- END WHAT WE DO SECTION  -->
+
+        <!-- SERVICES SECTION  -->
+
+        <section id="services">
+
+            <div class="container" style="min-height:920px;">
+                <div class="row">
+                    <div class="span12 centered">
+                        <h2><%= t("index.Student") %></h2>
+                        <div class="breaker"><span class="left"></span><div class="feather"></div><span class="right"></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12 centered">
+                        <%= render "recipients/index"%>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>        
+        <!-- END SERVICES  -->
+        <!-- WHO ARE US SECTION  -->
+        <section id="about"> 
+            <div class="container">
+                
+                  <%= render "pres/index"%>  
+               
+            </div> 
+        </section>
+        <!-- END WHO ARE US SECTION  -->
+
+        <!-- CONTACT SECTION  -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="span12 centered">
+                        <h2><%= t("index.Aboutus") %></h2>
+                        <div class="breaker">
+                            <span class="left"></span>
+                            <div class="feather"></div>
+                            <span class="right"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="pading-bottom:5%">
+                    <div class="span12 centered">
+                        <div style="text-align:left;">
+                            <span style="line-height:1.5;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;<span style="color:#999999;"><span style="font-size:16px;"><span style="font-size:24px;">
+                                <%= t("about.content")%>
+                            </span>！</span><span style="font-size:16px;"></span></span></span> 
+                        </div>
+                        <p>&nbsp</p>
+                        <p>&nbsp</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END CONTACT SECTION  -->
+
+        <!-- FOOTER  -->
+        <footer>
+
+            <!-- SOCIAL MODULE  --> 
+
+            <!-- END SOCIAL MODULE  -->
+
+            <!-- COPYRIGHT  -->
+            <div class="container">
+                <div class="row">
+                    <div class="span6 center">
+
+                        <img alt="YOURLOGO" src="assets/img/logo_footer.png">
+
+
+                    </div>
+                    <div class="span6">
+                        <p class="copyright text-right center">
+                            <%= link_to "中文版", :controller => controller.controller_name, 
+             :action => controller.action_name, :locale => "zh-TW"  %> | <%= link_to "English", :controller => controller.controller_name, 
+             :action => controller.action_name, :locale => "en" %>  
+                        </p>
+                        <p class="copyright text-right center">&copy; 2013 bitstudentaid </p>
+                        <p>&nbsp</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER  --> 
+
+        <!-- JAVA SCRIPTS  --> 
+        <script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="assets/js/modernizr.custom.js" type="text/javascript" ></script> 
+        <script src="assets/js/jquery.scrollto.js"></script>
+        <script src="assets/js/waypoints.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.tweet.js" type="text/javascript"></script>
+        <script src="assets/js/custom.js" type="text/javascript"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/jquery.flexslider.js"></script>
+        <script src="assets/js/jquery.fancybox.pack.js" type="text/javascript" ></script>
+        <script src="assets/js/jquery.fancybox-media.js?v=1.0.0" type="text/javascript"></script>
+         <script src="assets/js/retina.js"></script>
+        <!--     
+        *************** RETINA JS FUNCTIONALITY   ****************
+        
+        The script assumes you use Apple's prescribed high-resolution modifier (@2x) to denote
+        high-resolution image variants on your server.
+        
+        For example, if you have an image on your page that looks like this:
+        <img src="/images/my_image.png" />
+        
+        The script will check your server to see if an alternative image exists at this path:
+        "/images/my_image@2x.png"
+        
+        That's it! 
+        :)
+<script type="text/javascript"></script>
+        <!--RETINA JS END-->
+        <!-- END JAVA SCRIPTS  --> 

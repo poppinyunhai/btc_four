@@ -1,0 +1,36 @@
+  <div class="donors">
+    <table class="table table-bordered" >
+    <thead>
+      <tr >
+        <th><%= t("donors.name")%></th>
+        <th><%= t("donors.type")%></th>
+        <th><%= t("donors.num") %></th>
+        <th><%= t("donors.remark")%></th>
+      </tr>
+    </thead>
+    <% @donor.each do |d|%>
+    <tbody  style="font-family: 'Courier New';">
+      <tr>
+        <td >
+          <%= d.name %>
+        </td>
+        <td>
+            <%= d.type_desc %>
+        </td>
+        <td >
+          <%= d.num %>
+        </td>
+        <td >
+          <%= d.address %>
+        </td>
+        
+        
+      </tr>
+    </tbody>
+    <% end %>
+    </table>
+      <div class="text-center" onclick="window.location = '#whatwedo'">
+        <%= paginate @donor, :remote => true%>
+      </div>
+
+</div>

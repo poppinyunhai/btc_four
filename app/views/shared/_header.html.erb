@@ -1,0 +1,18 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" >比特币助学基金</a>
+    <ul class="nav">
+      <li><%= link_to "首页", root_path %></li>
+      <li><%= link_to "新闻", pres_path %></li>
+      <li><%= link_to "关于我们", abouts_path%></li>
+      <% if signed_in? %>
+      <li><%= link_to "管理入口", admin_donors_path %></li>
+      <li><%= link_to '管理员信息设置', edit_user_registration_path %></li>
+      <li>
+        <%= link_to '退出登录', destroy_user_session_path, :method => :delete %>
+      </li>
+
+      <% end %>
+    </ul>
+  </div>
+</div>

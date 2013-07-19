@@ -1,0 +1,56 @@
+<h1 class="text-center muted">捐助明细</h1>
+<div class="container-fluid" style= "padding-bottom: 2%">
+  <div class="row-fluid">
+    <div class="span2 offset1">
+      <div style="background-color: white;">
+      <%= render "shared/left"%>
+      </div>
+    </div>
+
+    <div class="span7 " style="background-color: white;">
+    <!--Sidebar content-->
+    <h2 style="padding-left: 1%">
+      <%= link_to "新建", new_admin_donor_path, class: "btn btn-primary"%>
+    </h2>
+    <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>地址</th>
+        <th>捐助类别</th>
+        <th>数量</th>
+        <th>管理</th>
+      </tr>
+    </thead>
+    <% @donor.each do |d|%>
+    <tbody>
+      <tr>
+        <td >
+          <%= d.name %>
+        </td>
+        <td >
+          <%= d.address %>
+        </td>
+        <td>
+          <%= d.type_desc %>
+        </td>
+        <td>
+          <%= d.num %>
+        </td>
+        <td>
+          <%= link_to "编辑", edit_admin_donor_path(d)%>
+          <%= link_to "删除", d, method: :delete %>
+        </td> 
+
+      </tr>
+    </tbody>
+    <% end %>
+    </table>
+      <div class="text-center">
+        <%= paginate @donor %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

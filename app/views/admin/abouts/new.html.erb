@@ -1,0 +1,29 @@
+<h1 class="text-center muted">添加新闻</h1>
+<div class="container-fluid" style= "padding-bottom: 2%">
+  <div class="row-fluid">
+    <div class="span2 offset1">
+      <div style="background-color: white;">
+      <%= render "shared/left"%>
+      </div>
+      </div>
+
+    <div class="span7 " style="background-color: white;">
+      <div style="padding:2%">
+        <%= form_for @about do |f| %>
+          <%= f.label :content, "内容" %>
+          <%= f.kindeditor :content %>
+          <p style="padding-top: 2%">
+          <%= f.submit "创建", class: "btn btn-primary"%>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

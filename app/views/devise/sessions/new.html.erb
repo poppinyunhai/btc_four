@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span10 offset1 center">
+        <div style="padding-bottom: 11%;">
+          <div style="background-color: white;">
+            <div style= "padding: 3%; text-align:center">
+              <h2>登陆</h2>
+                <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                  <div><%= f.label :username, "用户名"%><br />
+                  <%= f.text_field :username %></div>
+
+                  <div><%= f.label :password, "密码" %><br />
+                  <%= f.password_field :password %></div>
+
+                  <% if devise_mapping.rememberable? -%>
+                    <div><%= f.check_box :remember_me %> <%= f.label :remember_me , "记住我"%></div>
+                  <% end %>
+
+                  <div><%= f.submit "登陆", class: "btn btn-primary" %></div>
+                <% end %>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+

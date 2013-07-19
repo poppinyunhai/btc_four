@@ -1,0 +1,24 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  index:
+    Home: "Home"
+    Donors: "Donator"
+    Student: "Beneficiary"
+    News: "News"
+    Aboutus: "About Us"
+    title1: "To illuminate the children 's roads with the light of the wealth"
+    title2: "To build a ladder of the knoeledge with a tiny number"
+    title3: "To light the children' s future with one click of the mouse"
+  donors:
+    name: "Name"
+    type: "Type"
+    num: "Num"
+    remark: "Remark"
+  recipients:
+    name: "Name"
+    school: "School"
+    age: "Age"
+  about:
+    content: "what does 500 yuan stands for? maybe it equals a common dinner or just one  secondary brand dress. In Bitcoin world, 500 yuan is so tiny that it is only a number after decimal point. While in another corner of this world, we will never know how many poor families can not sleep for 500 yuan which is tution of their children. And we never think that 500 yuan may help someone change his or her fate. All you need to do is just click your mouse, and use these Bitcoin to build a brige leading to the knowledge for the children, we will also keep track of your benefaction in detail, I wish the good person like you can be peaceful and safe all lifetime!Bitcoin is the wealth in the new century, children are the owner of the future, let is work together to light up the children is prospect with the wealth"

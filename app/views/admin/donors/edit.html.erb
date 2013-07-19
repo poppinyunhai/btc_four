@@ -1,0 +1,30 @@
+<h1 class="text-center muted">捐助明细</h1>
+<div class="container-fluid" style= "padding-bottom: 2%">
+  <div class="row-fluid">
+    <div class="span2 offset1">
+      <div style="background-color: white;">
+      <%= render "shared/left"%>
+      </div>
+      </div>
+
+    <div class="span7 " style="background-color: white;">
+      <div style="padding:2%">
+        <%= form_for @donor, :url => { :controller => 'donors', :action => 'update', :id => @donor } do |donor| %>
+          <%= donor.label :name, "名字" %>
+          <%= donor.text_field :name, class: "span2" %>
+          <%= donor.label :address, "地址" %>
+          <%= donor.text_field :address, class: "span7" %>
+          <%= donor.label :type_desc, "捐助类型" %>
+          <%= donor.text_field :type_desc %>
+          <%= donor.label :num, "数量" %>
+          <%= donor.text_field :num %>
+          <p>
+          <%= donor.submit "更新", class: "btn btn-primary"%>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
